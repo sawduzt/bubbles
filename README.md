@@ -34,6 +34,10 @@ opens as a normal window with a field of bubbles to mess with. Click pops one, d
 the field around, right click spawns at the cursor, scroll on a bubble resizes it. F2 opens
 the settings.
 
+The window is a fixed size on purpose. The renderer has no device loss recovery, so a
+resize would mean rebuilding the D3D device mid-run; it is the next thing to do if a
+resizable window ever matters.
+
 ## build
 
 Needs mingw-w64 (`g++` and `windres`) on PATH. Then either run `build.bat` or:
